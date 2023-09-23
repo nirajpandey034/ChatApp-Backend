@@ -31,7 +31,7 @@ app.get("*", (req, res) => {
   return res.json({ info: "You have reached here" });
 });
 
-server.listen(process.env.APP_PORT, (err) => {
+server.listen(process.env.PORT, (err) => {
   if (err) console.log("Some Error Occured", err);
-  console.log(`Listening at ${process.env.APP_PORT}`);
+  console.log(`Listening at ${process.env.PORT}`);
 });
