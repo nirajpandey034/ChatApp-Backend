@@ -27,7 +27,11 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, (err) => {
+app.get("*", (req, res) => {
+  return res.json({ info: "You have reached here" });
+});
+
+server.listen(process.env.APP_PORT, (err) => {
   if (err) console.log("Some Error Occured", err);
-  console.log("Listening at 3001");
+  console.log(`Listening at ${process.env.APP_PORT}`);
 });
