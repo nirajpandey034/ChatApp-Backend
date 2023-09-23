@@ -10,7 +10,7 @@ const CLIENT_URL = process.env.NODE_CLIENT_URL;
 
 const io = new Server(server, {
   cors: {
-    origin: CLIENT_URL,
+    origin: process.env.NODE_CLIENT_URL,
     methods: ["GET", "POST"],
   },
 });
